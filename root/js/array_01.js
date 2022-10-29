@@ -1,5 +1,4 @@
 // Variáveis
-
 const arrayPaises = [
     ['OCEANIA','Pavlova: sobremesa em forma de bolo é feita com merengue, frutas, chantilly'],
     ['MÉXICO','Tacos: feito de tortilhas à base de milho e recheado com carne, tomate, queijo e alface'],
@@ -13,43 +12,34 @@ const arrayPaises = [
     ['ALEMANHA','Salsichas: faz presente em entradas, pratos principais e petiscos, seja crua, frita ou cozida'],
 ]
 
-let arrayContagem = new Object {"país:"; "qtd"}
-
-
 // querySelector
-
 const btnSortear = document.querySelector('#btnMensagem')
 const mensagem = document.querySelector('#boxMensagem')
 const paisMesagem = document.querySelector('#paisMesagem')
 const comidaMesagem = document.querySelector('#comidaMensagem')
 const qtdPaisesSorteado = document.querySelector('#qtdPaisesMensagem')
 
-
-// Functions
-
-// Function que define todos os elementos do array como '0', conforme quantidade de elementos do array paises
+// Function que adiciona 3° elemento de contagem no array países 
 function contagemPaises (array) {
     for (const i in array) {
-        arrayContagem.país{i} = array[i][0]
+        array[i].push(0)
     }
-    return arrayContagem
+    return array
 }
 contagemPaises(arrayPaises)
 
-
 // Function anônima de evento 'onclick'
-
 btnSortear.onclick = function () {
 
     let numSorte = Math.floor(Math.random()*10)
     let paisSorteado = arrayPaises[numSorte][0]
     let comidaSoteada = arrayPaises[numSorte][1]
-
-    arrayContagem[numSorte] += 1
+    
+    arrayPaises[numSorte][2] += 1
 
     mensagem.classList.add("block")
     paisMesagem.innerHTML = paisSorteado
     comidaMesagem.innerHTML = comidaSoteada
-    qtdPaisesSorteado.innerHTML = `🏆 País foi sorteado ${arrayContagem[numSorte]} vezes`  
-    console.log(arrayContagem)
+    qtdPaisesSorteado.innerHTML = `🏆 País foi sorteado ${arrayPaises[numSorte][2]} vezes`  
+    console.log(arrayPaises)
 }
