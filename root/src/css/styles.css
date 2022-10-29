@@ -1,0 +1,143 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: calc(2vw + 2rem);
+    margin: 0.67rem 0;
+}
+
+h2 {
+    font-size: calc(1vw + 1.5rem);
+    margin: 1rem 0;
+}
+
+h3 {
+    font-size: calc(1vw + 1.17rem);
+    margin: 1rem 0;
+}
+
+h4 {
+    font-size: calc(1vw + 1rem);
+    margin: 1rem, 0;
+}
+p {
+    font-size: calc(1vw + 0.4rem);
+    margin: 1rem 0;
+}
+
+
+/* background */
+.bg-container{
+    background-color: #6495ED;
+}
+.bg-white {
+    background-color: #e8f1f2;
+}
+
+
+/*padding and margin*/
+.pd-1 {
+    padding: 1rem;
+}
+.pd-2 {
+    padding: 1rem 2rem;
+}
+.pd-3 {
+    padding: 3rem;
+}
+.pd-4 {
+    padding: 4rem;
+}
+
+
+
+/* container */
+.container-content{
+    width: 80%;
+    position: relative;
+    top: 20vh;
+    border-radius: 15px 50px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container-center{
+    margin: 0 auto;
+}
+.content-button {
+    text-align: center;
+}
+
+
+/* text and font */
+.text-gray {
+    color: #708097;
+}
+.text-white {
+    color: #e8f1f2;
+}
+.font-bold {
+    font-weight: 600;
+}
+.font-size-1 {
+    font-size: 1rem;
+}
+.hide {
+    display: none;
+}
+.block {
+    display: block;
+}
+
+
+
+/* buttons */
+.btn-sortear {
+    background-color: #4caf50;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #4caf50;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+.btn-sortear:hover {
+    background-color: white;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    box-sizing: border-box;
+}
+.btn-sortear:active {
+    background-color: rgba(255, 255, 255, 0.267);
+    color: #4caf4fad;
+    border: 2px solid #4caf4f7c;
+}
+
+@media screen and (max-width: 800px){
+    .pd-4 {
+        padding: 3rem;
+    }
+    p {
+        font-size: calc(1vw + 0.6rem);
+    }
+    .container-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .pd-4 {
+        padding: 1.5rem;
+    }
+    p {
+        font-size: calc(1vw + 0.6rem);
+    }
+    .container-content {
+        width: 95%;
+        top: 15vh;
+        border-radius: 10px 30px 20px;
+    }
+}
