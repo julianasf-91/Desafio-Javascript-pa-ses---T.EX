@@ -13,7 +13,7 @@ const arrayPaises = [
     ['ALEMANHA','Salsichas: faz presente em entradas, pratos principais e petiscos, seja crua, frita ou cozida'],
 ]
 
-let arrayContagem = []
+let arrayContagem = new Object {"país:"; "qtd"}
 
 
 // querySelector
@@ -30,7 +30,7 @@ const qtdPaisesSorteado = document.querySelector('#qtdPaisesMensagem')
 // Function que define todos os elementos do array como '0', conforme quantidade de elementos do array paises
 function contagemPaises (array) {
     for (const i in array) {
-        arrayContagem[i] = 0
+        arrayContagem.país{i} = array[i][0]
     }
     return arrayContagem
 }
