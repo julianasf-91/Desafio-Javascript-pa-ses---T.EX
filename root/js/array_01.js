@@ -31,12 +31,11 @@ contagemPaises(arrayPaises)
 // Function anônima de evento 'onclick'
 btnSortear.onclick = function () {
 
-    let numSorte = Math.floor(Math.random()*10)
+    let numSorte = Math.floor(Math.random()*arrayPaises.length)
     let paisSorteado = arrayPaises[numSorte][0]
     let comidaSoteada = arrayPaises[numSorte][1]
-    
-    arrayPaises[numSorte][2] += 1
 
+    arrayPaises[numSorte][2] += 1
     mensagem.classList.add("block")
     paisMesagem.innerHTML = paisSorteado
     comidaMesagem.innerHTML = comidaSoteada
